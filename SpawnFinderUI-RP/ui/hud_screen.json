@@ -1,0 +1,34 @@
+{
+  "compass_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+  	"size": [ 40, 40 ],
+    "property_bag": {
+      "#item_id_aux": 22609920
+    }
+  },
+
+  "compass": {
+    "type": "stack_panel",
+    "size": [ 40, 40 ],
+    "offset": [ -10, 10 ],
+    "orientation": "vertical",
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "controls": [
+	  {"compass_view@hud.compass_view":{}}
+	]
+  },
+  
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "compass@hud.compass": {} }
+        ]
+      }
+    ]
+  }  
+}
